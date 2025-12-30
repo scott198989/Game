@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #0A0A0F;
+  color: #00FFFF;
+  font-family: 'Consolas', 'Monaco', monospace;
+}
+
+/* Hide cursor when pointer is locked */
+.pointer-locked {
+  cursor: none;
+}
+
+/* Cyberpunk text glow effect */
+.text-glow-cyan {
+  text-shadow: 0 0 10px #00FFFF, 0 0 20px #00FFFF, 0 0 30px #00FFFF;
+}
+
+.text-glow-magenta {
+  text-shadow: 0 0 10px #FF00FF, 0 0 20px #FF00FF, 0 0 30px #FF00FF;
+}
+
+.text-glow-green {
+  text-shadow: 0 0 10px #39FF14, 0 0 20px #39FF14, 0 0 30px #39FF14;
+}
+
+/* Box glow effects */
+.box-glow-cyan {
+  box-shadow: 0 0 10px #00FFFF, 0 0 20px #00FFFF, inset 0 0 10px rgba(0, 255, 255, 0.1);
+}
+
+.box-glow-magenta {
+  box-shadow: 0 0 10px #FF00FF, 0 0 20px #FF00FF, inset 0 0 10px rgba(255, 0, 255, 0.1);
+}
+
+/* Scanline effect overlay */
+.scanlines::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.1),
+    rgba(0, 0, 0, 0.1) 1px,
+    transparent 1px,
+    transparent 2px
+  );
+  pointer-events: none;
+}
